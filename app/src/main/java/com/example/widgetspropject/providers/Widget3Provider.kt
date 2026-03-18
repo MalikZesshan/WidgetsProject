@@ -8,12 +8,11 @@ import android.content.Intent
 import android.widget.RemoteViews
 import com.example.widgetspropject.R
 
-class Widget2Provider : AppWidgetProvider() {
+class Widget3Provider : AppWidgetProvider() {
 
     companion object {
         var time = "--:--"
         var islamicDate = "----"
-        var amPm = "----"
         var gregorianDate = "----"
     }
 
@@ -25,7 +24,6 @@ class Widget2Provider : AppWidgetProvider() {
             time = intent.getStringExtra("time") ?: "--:--"
             islamicDate = intent.getStringExtra("islamicDate") ?: "----"
             gregorianDate = intent.getStringExtra("gregorianDate") ?: "----"
-            amPm = intent.getStringExtra("amPm") ?: "----"
 
             updateWidget(context)
         }
@@ -33,15 +31,15 @@ class Widget2Provider : AppWidgetProvider() {
 
     private fun updateWidget(context: Context) {
         val manager = AppWidgetManager.getInstance(context)
-        val component = ComponentName(context, Widget2Provider::class.java)
+        val component = ComponentName(context, Widget3Provider::class.java)
         val ids = manager.getAppWidgetIds(component)
 
         for (id in ids) {
-            val views = RemoteViews(context.packageName, R.layout.widget_layout_2)
+            val views = RemoteViews(context.packageName, R.layout.widget_layout_3)
+
             views.setTextViewText(R.id.timeText, time)
             views.setTextViewText(R.id.islamicDate, islamicDate)
             views.setTextViewText(R.id.gregorianDate, gregorianDate)
-            views.setTextViewText(R.id.timeAmPmText, amPm)
 
             manager.updateAppWidget(id, views)
         }

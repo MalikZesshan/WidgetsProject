@@ -1,41 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:padding="16dp"
-    android:background="@drawable/img_2"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:background="@drawable/img_2"
+    android:gravity="center"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/timeText"
-        android:text="03:49 PM"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        android:textColor="#1B5E20"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
 
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="03:49"
+            android:textColor="@color/widgets_accent_yellow"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/timeAmPmText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="serif"
+            android:text="PM"
+            android:textColor="@color/widgets_accent_yellow"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
     <TextView
         android:id="@+id/islamicDate"
-        android:text="10 Rajab 1447"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:textColor="#2E7D32"
-        android:layout_below="@id/timeText"
-        android:layout_marginTop="8dp"
-        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:fontFamily="serif"
+        android:text="10 Rajab 1447"
+        android:textColor="@color/widgets_brown"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/gregorianDate"
-        android:text="Wed, 7 Jan 2026"
-        android:textSize="14sp"
-        android:textColor="#555"
-        android:layout_below="@id/islamicDate"
-        android:layout_marginTop="4dp"
-        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@id/islamicDate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:fontFamily="serif"
+        android:text="Wedensday, 7 Jan 2026"
+        android:textColor="@color/widgets_brown"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
-</RelativeLayout>
+</LinearLayout>

@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="widgets_brown">#897653</color>
+    <color name="widgets_accent_yellow">#E0BD59</color>
 </resources>
