@@ -14,7 +14,6 @@
         android:textStyle="bold"
         android:fontFamily="serif"
         android:textColor="@color/widgets_brown"
-        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -23,10 +22,8 @@
         android:text="Ramadan 1447"
         android:textSize="22sp"
         android:textColor="@color/widgets_accent_yellow"
-        android:layout_below="@id/timeText"
         android:layout_marginTop="8dp"
         android:fontFamily="serif"
-        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -36,9 +33,7 @@
         android:textSize="25sp"
         android:fontFamily="serif"
         android:textColor="@color/widgets_accent_yellow"
-        android:layout_below="@id/islamicDate"
         android:layout_marginTop="4dp"
-        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
